@@ -1,0 +1,28 @@
+<view class='requestFail' wx:if="{{request_fail}}">
+  <text>网络或服务器错误，请检查网络......</text>
+</view>
+<view wx:if="{{!request_fail}}" class='wrap'>
+  <scroll-view class='sview' scroll-y style="height: {{windowHeight}};" bindscrolltolower="loadMore" lower-threshold="100" enable-back-to-top>
+    <swiper indicator-dots autoplay interval="{{interval}}" duration="{{duration}}" class='sviewItem'>
+      <block wx:for="{{firstData}}" wx:key="unique">
+        <swiper-item>
+          <navigator class='firstItem' url='{{url}}?id={{item.mobile_url}}&title={{item.title}}'>
+            <image src="{{item.pic}}" class='firstImg'></image>
+            <view class='firstTitle'>{{item.title}}</view>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+    
+    <navigator wx:for="{{data_arr}}" wx:key="unique" url='{{url}}?id={{item.mobile_url}}&title={{item.title}}' class='item'>
+      <image class='itemImg' src="{{item.pic}}"></image>
+      <view class='itemCont'>
+        <view class='title'>{{item.title}}</view>
+        <view class='com_time'>
+          <text class='com'>评论:{{item.comments}}</text>
+          <text class='time'>{{item.news_time}}</text>
+        </view>
+      </view>
+    </navigator>
+  </scroll-view>
+</view>

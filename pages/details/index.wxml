@@ -1,0 +1,8 @@
+<view class='requestFail' wx:if="{{request_fail}}">
+  <text>网络或服务器错误，请检查网络......</text>
+</view>
+<view wx:if="{{!request_fail}}" class='wrap'>
+  <scroll-view scroll-y style="height: {{windowHeight}};" enable-back-to-top>
+    <rich-text nodes="{{content}}" class='cont'></rich-text>
+  </scroll-view>
+</view>

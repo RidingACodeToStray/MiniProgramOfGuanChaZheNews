@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/gundong/index",
+    "pages/shiping/index",
+    "pages/huabian/index",
+    "pages/wode/index",
+    "pages/details/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#d81e06",
+    "navigationBarTitleText": "新闻观察",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor":"#d81e06",
+    "borderStyle":"black ",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "要闻",
+        "iconPath":"static/img/yaowen.png",
+        "selectedIconPath":"static/img/yaowen_s.png"
+      },
+      {
+        "pagePath": "pages/gundong/index",
+        "text": "滚动",
+        "iconPath": "static/img/gundong.png",
+        "selectedIconPath": "static/img/gundong_s.png"
+      },
+      {
+        "pagePath": "pages/huabian/index",
+        "text": "花边",
+        "iconPath": "static/img/huabian.png",
+        "selectedIconPath": "static/img/huabian_s.png"
+      },
+      {
+        "pagePath": "pages/shiping/index",
+        "text": "时评",
+        "iconPath": "static/img/shiping.png",
+        "selectedIconPath": "static/img/shiping_s.png"
+      }
+    ]
+  }
+}

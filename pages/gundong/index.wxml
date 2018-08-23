@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view>
+  <scroll-view class='sview' scroll-y style="height: {{windowHeight}};" bindscrolltolower="loadMore" lower-threshold="100" enable-back-to-top>
+    <navigator wx:for="{{data_arr}}" wx:key="unique" url='{{url}}?id={{item.mobile_url}}&title={{item.title}}' class='item'>
+      <view class='title'>{{item.title}}</view>
+      <view class='com'>评论:{{item.comments}}</view>
+      <view class='time'>{{item.news_time}}</view>
+    </navigator>
+  </scroll-view>
+</view>
